@@ -107,7 +107,6 @@
 .card-rate{
     color: #004dff;
     font-size: 18px;
-    font-weight: 700;
 }
 
 .card-text-address{
@@ -153,6 +152,7 @@
 .card > .card-body > .btn-warning + .card-title{
     font-size: 32px;
     color: #000000;
+    letter-spacing: -1px;
 }
 
 .card > .card-body > .btn-warning + .card-title + .card-rate{
@@ -170,12 +170,58 @@
     color: #454545;
 }
 
-.card > .card-body .user-details > p + span{
+ span{
     font-size: 14px;
     color: #454545;
     opacity: 70%;
 }
 
+.slider > h2{
+    color: #000000;
+    font-size: 32px;
+    letter-spacing: -1px;
+}
+
+.btn-primary.rounded-pill{
+    font-size: 14px;
+}
+
+.carousel-control-next-icon {
+    background-image: url("images/arrow-right.svg");
+}
+
+.carousel-control-prev-icon {
+    background-image: url("images/arrow-right.svg");
+    transform: rotate(180deg);
+}
+
+.carousel-inner > .carousel-item .card{ 
+    max-width: 445px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+}
+
+.carousel-inner > .carousel-item .card h2{ 
+    color: #454545;
+    font-size: 24px;
+}
+
+.carousel-inner > .carousel-item .card p{ 
+    color: #454545;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+h5.card-title.mt-5.mb-4{
+    line-height:0 !important;
+}
+
+img.rounded-circle{
+    border-radius: 45px !important;
+}
+
+img.small{
+    border-radius: 20px !important;
+}
 footer{
     background-color: #f6f7f9;
 }
@@ -183,6 +229,25 @@ footer{
 footer p{
     font-size: 14px;
     color: #454545;
+    line-height: 24px;
+    font-weight: 600;
+}
+
+.text-left{
+    text-align: left !important;    
+} 
+
+.text-left > p{
+    font-size: 18px;
+    color: #454545;
+    font-weight: 400;
+}
+
+.text-left > p + span{
+    font-size: 14px;
+    color: #454545;
+    font-weight: 400;
+    opacity: 70%;
 }
 
 /* tablet - md */
@@ -243,12 +308,15 @@ footer p{
     .card > .card-body > h5.card-title-information{
         font-size: 24px;
     }
-
     
     .card.card-bg-gray > .card-body p{
         font-size: 14px;
         color: #454545;
         font-weight: 400;
     }
+
+    .text-left{
+        text-align: center !important;    
+    }    
 }
 
