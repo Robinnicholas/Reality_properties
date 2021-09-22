@@ -1,7 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 
 *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
+}
+
+.container{
+    max-width: 1110px !important;
 }
 
 .btn-primary,.bg-primary{
@@ -20,7 +27,7 @@
     color: #ffffff;
     font-size: 14px;
     font-weight: 600;
-    padding: 0 15px;
+    padding: 0 14px;
 }
 
 .hero{
@@ -36,19 +43,21 @@
     max-width: 635px;
     position: absolute;
     top: 50%;
-    transform: translate(20%,-50%);
+    transform: translate(30%,-50%);
 }
 
 .hero .hero-content h1{
     font-size: 44px;
+    margin: 0 0 9px;
 }
 
 .hero .hero-content p{
     font-size: 18px;
+    margin:0 0 40px;
 }
 
-.hero .hero-content input{
-    padding: 10px;
+.hero .hero-content input.form-control{
+    padding: 14px;
 }
 
 .btn-outline-secondary.dropdown-toggle.show:focus,.btn-outline-secondary:focus,.form-control:focus {
@@ -61,7 +70,7 @@
     border-left: 1px solid grey;
 }
 
-.hero .hero-content input::placeholder{
+.hero .hero-content input.form-control::placeholder{
     font-size: 14px;
 }
 
@@ -87,6 +96,19 @@
 .feature h2.fw-bold{
     font-size: 32px;
     letter-spacing: -1;
+}
+
+.feature > .container .card{
+    max-width: 350px;
+    height: 400px;
+}
+
+.feature > .container > .row div.col-12.col-xl-4{
+    margin: 30px 0 0;
+}
+
+.feature > .container a.btn-primary.rounded-pill{
+    padding: 14px 28px;
 }
 
 .card .card-img-top{
@@ -122,8 +144,15 @@
     padding: 8px;
 }
 
-.card.card-bg-gray{
+.information > .container .card.card-bg-gray{
+    max-width: 540px;
+    height: 350px;
     background-color: #f6f7f9;
+}
+
+.information > .container .card.bg-primary{
+    max-width: 540px;
+    height: 350px;
 }
 
 .card.card-bg-gray > .card-body > h5.card-title-information,
@@ -250,6 +279,10 @@ footer p{
     opacity: 70%;
 }
 
+footer p{
+    max-width: 730px;
+}
+
 /* tablet - md */
 
 @media (max-width: 768px) { 
@@ -289,11 +322,11 @@ footer p{
     .hero .hero-content p{
         font-size: 12px;
     }
-    .hero .hero-content input{
+    .hero .hero-content input.form-control{
         padding: 8px;
     }
     
-    .hero .hero-content input::placeholder{
+    .hero .hero-content input.form-control::placeholder{
         font-size: 12px;
     }
     
