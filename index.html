@@ -4,9 +4,6 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <!-- materialize css  -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" integrity="sha512-UJfAaOlIRtdR+0P6C3KUoTDAxVTuy3lnSXLyLKlHYJlcSU8Juge/mjeaxDNMlw9LgeIotgz5FP8eUQPhX1q10A==" crossorigin="anonymous" /> -->
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -25,9 +22,9 @@
   <body>
     
     <!-- header  -->
-    <header class="bg-primary">
-        <nav class="navbar navbar-expand-lg navbar-light p-0">
-            <div class="container p-0">
+    <section class="bg-primary">
+        <header class="navbar navbar-expand-lg navbar-light p-0">
+            <div class="container-fluid p-0">
                 <a class="navbar-brand p-0" href="javascript:void(0)"><img src="images/reality-properties.png" alt="Reality Properties"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -65,24 +62,23 @@
                     </div>
                 </div>
             </div>
-        </nav>
-    </header>
+        </header>
+    </section>
 
     <!-- hero bg -->
     <section class="hero">
-        <div class="hero-content container col-sm-10 col-md-8 col-lg-6 p-0">
+        <!-- <img src="images/background.jpg" alt=""> -->
+        <div class="hero-content container col-12 col-sm-11 col-md-8 col-lg-8 p-0">
             <h1 class="fw-bold">Let us Guide You Home</h1>
             <p class="fw-bold">Find the house of your dreams.</p>
             <form action="">
-                <div class="input-group mb-3">
-                    <button class="btn btn-outline-secondary ps-4 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">For Rent <img src="images/chevron-down.svg" class="ps-sm-3 ps-md-5" alt=""></button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="javascript:void(0)">Action</a></li>
-                        <li><a class="dropdown-item" href="javascript:void(0)">Another action</a></li>
-                        <li><a class="dropdown-item" href="javascript:void(0)">Something else here</a></li>
-                    </ul>
-                    <input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="&#xF002; Search for properties or keywords.." style="font-family:Arial, FontAwesome">
-                  </div>
+                <select name="" id="" class="col-1 col-sm-12">
+                    <option value="value_one">For Rent</option>
+                    <option value="value_two">Value Two</option>
+                    <option value="value_Three">Value Three</option>
+                </select>
+                <button class="search col-1" type="submit"><i class="fa fa-search"></i></button>
+                <input type="text" class="keyword col-2 col-sm-7" placeholder="Search for properties or keywords.."/>
             </form>
         </div>
     </section>
@@ -197,7 +193,7 @@
                     </a>
                 </div>
                 <div class="col-12 text-center mt-5">
-                    <a href="javascript:void(0)" class="btn btn-primary rounded-pill text-white">All Properties</a>
+                    <a href="javascript:void(0)" class="btn btn-primary all-properties rounded-pill text-white">All Properties</a>
                 </div>
             </div>
         </div>
@@ -210,7 +206,7 @@
                 <div class="col-12 col-md-12 col-xl-6 my-5 p-0">
                     <div class="card p-4 mx-auto card-bg-gray">
                         <div class="card-body rounded">
-                            <h5 class="card-title-information m-0 col-10 fw-bold text-primary">Aktas Properties Information</h5>
+                            <h5 class="card-title-information m-0 fw-bold text-primary">Aktas Properties Information</h5>
                             <p class="card-text-address mt-3">1234 Hacker St, San Francisco</p>
                             <p class="card-text-number">(123) 456-7890</p>
                             <p class="card-text-time">Mon — Sun: 8:00am - 6:00pm</p>
@@ -220,9 +216,9 @@
                 <div class="col-12 col-md-12 col-xl-6 my-5 p-0">
                     <div class="card p-4 mx-auto bg-primary">
                         <div class="card-body rounded">
-                            <h5 class="card-title-information col-8 m-0 fw-bold text-white">Want to Sell Property?</h5>
+                            <h5 class="card-title-information m-0 fw-bold text-white">Want to Sell Property?</h5>
                             <p class="card-text-reachus col-lg-9 my-4 text-white fw-normal">Let us create a tailored strategic marketing plan and keep track of the selling process.</p>
-                            <a href="javascript:void(0)" class="btn btn-success px-5 py-3 rounded-pill">Contact Us</a>
+                            <a href="javascript:void(0)" class="btn btn-success rounded-pill">Contact Us</a>
                         </div>
                     </div>
                 </div>
@@ -251,14 +247,14 @@
                 <div class="card-body px-5">
                     <div class="row">
                         <div class="col-xl-2 col-md-2 text-left">
-                            <img src="images/user.jpg" class="small" width="50" height="50" alt="">
+                            <img src="images/user3.jpg" class="small" width="50" height="50" alt="">
                         </div>
                         <div class="col-xl-6 col-md-6 text-left">
                             <p class="m-0">Opi Watihana</p>
                             <span>Sales Manager</span>
                         </div>
                         <div class="col-xl-4 col-md-4">
-                            <a href="javascript:void(0)" class="btn btn-primary rounded-pill px-5 py-3">Contact</a>
+                            <a href="javascript:void(0)" class="btn btn-primary contact-us rounded-pill">Contact</a>
                         </div>
                     </div>
                 </div>
@@ -273,31 +269,45 @@
             <div class="container owl-carousel">
                 <div class="slider-card mx-auto">
                     <div class="d-flex justify-content-center align-items-center mb-4">
-                        <img src="images/user.jpg" class="rounded-circle" width="120" height="120" alt="" >
+                        <img src="images/user1.jpg" class="rounded-circle" width="120" height="120" alt="" >
                     </div>
-                    <h5 class="mb-0 text-center"><b>Oluchi Mazi</b></h5>
-                    <p class="text-center p-4">The popularity of breakfast foods is a good reason to keep dependable starters, such as eggs, bread and other staples, on hand. But why reserve them only for morning meals? Planning breakfast for dinner is a good way to serve up simple, satisfying evening meals without spending a lot of time in the kitchen.</p>
+                    <h5 class="mb-0 text-center fw-bold">Oluchi Mazi</h5>
+                    <p class="text-center px-4">The popularity of breakfast foods is a good reason to keep dependable starters, such as eggs, bread and other staples, on hand. But why reserve them only for morning meals? Planning breakfast for dinner is a good way to serve up simple, satisfying evening meals without spending a lot of time in the kitchen.</p>
                 </div>
                 <div class="slider-card mx-auto">
                     <div class="d-flex justify-content-center align-items-center mb-4">
-                        <img src="images/user.jpg" class="rounded-circle" width="120" height="120" alt="" >
+                        <img src="images/user2.jpg" class="rounded-circle" width="120" height="120" alt="" >
                     </div>
-                    <h5 class="mb-0 text-center"><b>Fariba Mirzaii</b></h5>
-                    <p class="text-center p-4">If there is one thing kids love more than eating pizza, it’s being able to make it themselves using all their favorite toppings. Creating a “make it yourself” pizza party is a great way to customize the meal while involving friends and family in a fun activity.</p>
+                    <h5 class="mb-0 text-center fw-bold">Fariba Mirzaii</h5>
+                    <p class="text-center px-4">If there is one thing kids love more than eating pizza, it’s being able to make it themselves using all their favorite toppings. Creating a “make it yourself” pizza party is a great way to customize the meal while involving friends and family in a fun activity.</p>
                 </div>
                 <div class="slider-card mx-auto">
                     <div class="d-flex justify-content-center align-items-center mb-4">
-                        <img src="images/user.jpg" class="rounded-circle" width="120" height="120" alt="" >
+                        <img src="images/user3.jpg" class="rounded-circle" width="120" height="120" alt="" >
                     </div>
-                    <h5 class="mb-0 text-center"><b>Bansilal Brata</b></h5>
-                    <p class="text-center p-4">Have you ever heard the expression, “Do not count your chickens before they hatch?” Maybe an older, wiser individual would tell you this to keep you from getting ahead of yourself. Like buying a new car before you actually got that new job. Well, when setting</p>
+                    <h5 class="mb-0 text-center fw-bold">Bansilal Brata</h5>
+                    <p class="text-center px-4">Have you ever heard the expression, “Do not count your chickens before they hatch?” Maybe an older, wiser individual would tell you this to keep you from getting ahead of yourself. Like buying a new car before you actually got that new job. Well, when setting</p>
                 </div>
                 <div class="slider-card mx-auto">
                     <div class="d-flex justify-content-center align-items-center mb-4">
-                        <img src="images/user.jpg" class="rounded-circle" width="120" height="120" alt="" >
+                        <img src="images/user1.jpg" class="rounded-circle" width="120" height="120" alt="" >
                     </div>
-                    <h5 class="mb-0 text-center"><b>Oluchi Mazi</b></h5>
-                    <p class="text-center p-4">The popularity of breakfast foods is a good reason to keep dependable starters, such as eggs, bread and other staples, on hand. But why reserve them only for morning meals? Planning breakfast for dinner is a good way to serve up simple, satisfying evening meals without spending a lot of time in the kitchen.</p>
+                    <h5 class="mb-0 text-center fw-bold">Oluchi Mazi</h5>
+                    <p class="text-center px-4">The popularity of breakfast foods is a good reason to keep dependable starters, such as eggs, bread and other staples, on hand. But why reserve them only for morning meals? Planning breakfast for dinner is a good way to serve up simple, satisfying evening meals without spending a lot of time in the kitchen.</p>
+                </div>
+                <div class="slider-card mx-auto">
+                    <div class="d-flex justify-content-center align-items-center mb-4">
+                        <img src="images/user2.jpg" class="rounded-circle" width="120" height="120" alt="" >
+                    </div>
+                    <h5 class="mb-0 text-center fw-bold">Fariba Mirzaii</h5>
+                    <p class="text-center px-4">If there is one thing kids love more than eating pizza, it’s being able to make it themselves using all their favorite toppings. Creating a “make it yourself” pizza party is a great way to customize the meal while involving friends and family in a fun activity.</p>
+                </div>
+                <div class="slider-card mx-auto">
+                    <div class="d-flex justify-content-center align-items-center mb-4">
+                        <img src="images/user3.jpg" class="rounded-circle" width="120" height="120" alt="" >
+                    </div>
+                    <h5 class="mb-0 text-center fw-bold">Bansilal Brata</h5>
+                    <p class="text-center px-4">Have you ever heard the expression, “Do not count your chickens before they hatch?” Maybe an older, wiser individual would tell you this to keep you from getting ahead of yourself. Like buying a new car before you actually got that new job. Well, when setting</p>
                 </div>
             </div>
          
@@ -307,10 +317,10 @@
     <footer>
         <center>
             <div class="col-12">
-                <img src="images/logo-blue.png" class="m-5" alt="logo">
+                <img src="images/logo-blue.png" alt="logo">
             </div>
             <div class="col-8">
-                <p class="pb-5">Have you ever heard the expression, “Do not count your chickens before they hatch?” Maybe an older, wiser individual would tell you this to keep you from getting ahead of yourself.</p>
+                <p class="m-0">Have you ever heard the expression, “Do not count your chickens before they hatch?” Maybe an older, wiser individual would tell you this to keep you from getting ahead of yourself.</p>
             </div>
         </center>
     </footer>
