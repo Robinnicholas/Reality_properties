@@ -8,7 +8,7 @@
 }
 
 .container{
-    max-width: 1110px !important;
+    max-width: 1134px !important;
 }
 
 .btn-primary,.bg-primary{
@@ -31,14 +31,10 @@
 }
 
 section.bg-primary .navbar .container-fluid{
-    margin: 40px 165px !important;
+    margin: 0 165px !important;
+    padding: 40px 12px !important;
 }
 
-/* .hero img{
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-} */
 section.bg-primary{
     background-image: url("images/background.jpg");
     height: 100vh;
@@ -48,23 +44,18 @@ section.bg-primary{
 }
 
 .collapse.navbar-collapse{
+    text-align: center;
     background-color: #004dff;
+    z-index: 10;
 }
 
-.hero{
-    color: white;
+span > a.nav-link.text-white{
+    font-weight: 600;
+    font-size: 24px;
 }
 
-.hero .hero-content h1{
-    font-size: 44px;
-    margin: 0 0 9px;
-    height: 60px;
-}
-
-.hero .hero-content p{
-    font-size: 18px;
-    margin:0 0 40px;
-    height: 24px;
+li.nav-item{
+    height: 35px;
 }
 
 form{
@@ -226,6 +217,34 @@ a.all-properties{
     min-height: 700px;
 }
 
+.card-text-details > span{
+    margin-right: 10px !important;
+}
+
+.card-text-details > span:nth-of-type(1):before{
+    content: url("images/bed.png") ;
+    width: 20px;
+    height: 16px;
+    margin-right: 10px;
+}
+
+.card-text-details > span:nth-of-type(2):before{
+    content: url("images/bathtub.png") ;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.card-text-details > span:nth-of-type(3):before{
+    content: url("images/sq_feet.png") ;
+    width: 17px;
+    height: 17px;
+    margin-right: 10px;
+}
+
+section.information{
+    padding: 100px 0;
+}
 
 .card > .card-body > .btn-warning + .card-title{
     font-size: 32px;
@@ -344,14 +363,34 @@ footer p{
 }
 
 
-.hero .hero-content{
+.hero{
+    color: white;
+    position: relative;
+    top: 35%;
+    transform: translate(0,-50%);
+}
+
+
+.hero .hero-content h1{
+    font-size: 44px;
+    margin: 0 0 9px;
+    height: 60px;
+}
+
+.hero .hero-content p{
+    font-size: 18px;
+    margin:0 0 40px;
+    height: 24px;
+}
+
+/* .hero .hero-content{
     max-width: 635px !important;
     position: absolute;
     top: 50%;
     left: 0;
     transform: translate(0,-50%);
     margin: 0 165px;
-}
+} */
 
 
 /* tablet - md */
@@ -410,23 +449,12 @@ footer p{
         margin: 40px auto !important;
     }
     
-    .hero .hero-content{
+    /* .hero .hero-content{
         max-width: 635px !important;
         position: absolute;
         top: 50%;
         left: 0;
         transform: translate(0,-50%);
         margin: 0;
-    }
+    } */
 }
-
-/* @media (min-width: 1441px){
-    .hero .hero-content{
-        max-width: 635px;
-        position: absolute;
-        top: 40%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-    }
-} */
-

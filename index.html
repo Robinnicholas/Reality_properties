@@ -24,13 +24,24 @@
     <!-- header  -->
     <section class="bg-primary">
         <header class="navbar navbar-expand-lg navbar-light p-0">
-            <div class="container-fluid p-0">
-                <a class="navbar-brand p-0" href="javascript:void(0)"><img src="images/reality-properties.png" alt="Reality Properties"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+            <div class="container-fluid">
+                <a class="navbar-brand p-0" href="javascript:void(0)"><img src="images/reality-properties.png" width="161" height="42" alt="Reality Properties"></a>
+                <button class="navbar-toggler" style="border: none;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <div class="d-flex">
+                        <span>
+                            <a class="nav-link text-white" href="">&equiv;</a>
+                        </span>
+                        <span>
+                            <a class="nav-link text-white" href="">&lrarr;</a>
+                        </span>
+                        <span>
+                            <a class="nav-link text-white" href="">&#9825;</a>
+                        </span>
+                        
+                    </div>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav me-auto mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link" href="javascript:void(0)">Homepage</a>
                         </li>
@@ -52,10 +63,10 @@
                     </ul>
                     <div class="d-flex">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
+                            <li class="nav-item d-none d-lg-block">
                                 <a class="nav-link" href="">&lrarr;</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item d-none d-lg-block">
                                 <a class="nav-link" href="">&#9825;</a>
                             </li>
                         </ul>
@@ -63,28 +74,31 @@
                 </div>
             </div>
         </header>
+
+        
+        <section class="hero">
+            <!-- <img src="images/background.jpg" alt=""> -->
+            <div class="hero-content container col-12 col-sm-12 col-md-9 col-lg-8">
+                <h1 class="fw-bold">Let us Guide You Home</h1>
+                <p class="fw-bold">Find the house of your dreams.</p>
+                <form action="">
+                    <select name="" id="" class="col-1 col-sm-12">
+                        <option value="value_one">For Rent</option>
+                        <option value="value_two">Value Two</option>
+                        <option value="value_Three">Value Three</option>
+                    </select>
+                    <button class="search col-1" type="submit"><i class="fa fa-search"></i></button>
+                    <input type="text" class="keyword col-2 col-sm-7" placeholder="Search for properties or keywords.."/>
+                </form>
+            </div>
+        </section>
+
     </section>
 
     <!-- hero bg -->
-    <section class="hero">
-        <!-- <img src="images/background.jpg" alt=""> -->
-        <div class="hero-content container col-12 col-sm-11 col-md-8 col-lg-8 p-0">
-            <h1 class="fw-bold">Let us Guide You Home</h1>
-            <p class="fw-bold">Find the house of your dreams.</p>
-            <form action="">
-                <select name="" id="" class="col-1 col-sm-12">
-                    <option value="value_one">For Rent</option>
-                    <option value="value_two">Value Two</option>
-                    <option value="value_Three">Value Three</option>
-                </select>
-                <button class="search col-1" type="submit"><i class="fa fa-search"></i></button>
-                <input type="text" class="keyword col-2 col-sm-7" placeholder="Search for properties or keywords.."/>
-            </form>
-        </div>
-    </section>
 
     <!-- featured properties  -->
-    <section class="feature pb-5">
+    <section class="feature">
         <div class="container">
             <div class="row">
                 <div class="col-12 mt-5">
@@ -99,9 +113,9 @@
                                 <h6 class="card-rate fw-bold">$225,000</h6>
                                 <p class="card-text-address">263 S Rexford Dr, Beverly Hills, CA 90212</p>
                                 <p class="card-text-details">
-                                    <img src="images/bed.png" width="20" height="16" alt="Bed Icon" /><span class="mx-1">4 Beds</span>
-                                    <img src="images/bathtub.png" width="30" height="30" alt="Bathtub Icon" /><span class="mx-1">2 Baths</span>
-                                    <img src="images/sq_feet.png" width="17" height="17" alt="SqFt Icon" /><span class="mx-1">980 SqFt</span>
+                                    <span class="mx-1 p-0">4 Beds</span>
+                                    <span class="mx-1 p-0">2 Baths</span>
+                                    <span class="mx-1 p-0">980 SqFt</span>
                                 </p>
                             </div>
                         </div>
@@ -116,9 +130,9 @@
                                 <h6 class="card-rate fw-bold">$225,000</h6>
                                 <p class="card-text-address">263 S Rexford Dr, Beverly Hills, CA 90212</p>
                                 <p class="card-text-details">
-                                    <img src="images/bed.png" width="20" height="16" alt="Bed Icon" /><span class="mx-1">4 Beds</span>
-                                    <img src="images/bathtub.png" width="30" height="30" alt="Bathtub Icon" /><span class="mx-1">2 Baths</span>
-                                    <img src="images/sq_feet.png" width="17" height="17" alt="SqFt Icon" /><span class="mx-1">980 SqFt</span>
+                                    <span class="mx-1 p-0">4 Beds</span>
+                                    <span class="mx-1 p-0">2 Baths</span>
+                                    <span class="mx-1 p-0">980 SqFt</span>
                                 </p>
                             </div>
                         </div>
@@ -133,9 +147,9 @@
                                 <h6 class="card-rate fw-bold">$225,000</h6>
                                 <p class="card-text-address">263 S Rexford Dr, Beverly Hills, CA 90212</p>
                                 <p class="card-text-details">
-                                    <img src="images/bed.png" width="20" height="16" alt="Bed Icon" /><span class="mx-1">4 Beds</span>
-                                    <img src="images/bathtub.png" width="30" height="30" alt="Bathtub Icon" /><span class="mx-1">2 Baths</span>
-                                    <img src="images/sq_feet.png" width="17" height="17" alt="SqFt Icon" /><span class="mx-1">980 SqFt</span>
+                                    <span class="mx-1 p-0">4 Beds</span>
+                                    <span class="mx-1 p-0">2 Baths</span>
+                                    <span class="mx-1 p-0">980 SqFt</span>
                                 </p>
                             </div>
                         </div>
@@ -150,9 +164,9 @@
                                 <h6 class="card-rate fw-bold">$225,000</h6>
                                 <p class="card-text-address">263 S Rexford Dr, Beverly Hills, CA 90212</p>
                                 <p class="card-text-details">
-                                    <img src="images/bed.png" width="20" height="16" alt="Bed Icon" /><span class="mx-1">4 Beds</span>
-                                    <img src="images/bathtub.png" width="30" height="30" alt="Bathtub Icon" /><span class="mx-1">2 Baths</span>
-                                    <img src="images/sq_feet.png" width="17" height="17" alt="SqFt Icon" /><span class="mx-1">980 SqFt</span>
+                                    <span class="mx-1 p-0">4 Beds</span>
+                                    <span class="mx-1 p-0">2 Baths</span>
+                                    <span class="mx-1 p-0">980 SqFt</span>
                                 </p>
                             </div>
                         </div>
@@ -167,9 +181,9 @@
                                 <h6 class="card-rate fw-bold">$225,000</h6>
                                 <p class="card-text-address">263 S Rexford Dr, Beverly Hills, CA 90212</p>
                                 <p class="card-text-details">
-                                    <img src="images/bed.png" width="20" height="16" alt="Bed Icon" /><span class="mx-1">4 Beds</span>
-                                    <img src="images/bathtub.png" width="30" height="30" alt="Bathtub Icon" /><span class="mx-1">2 Baths</span>
-                                    <img src="images/sq_feet.png" width="17" height="17" alt="SqFt Icon" /><span class="mx-1">980 SqFt</span>
+                                    <span class="mx-1 p-0">4 Beds</span>
+                                    <span class="mx-1 p-0">2 Baths</span>
+                                    <span class="mx-1 p-0">980 SqFt</span>
                                 </p>
                             </div>
                         </div>
@@ -184,9 +198,9 @@
                                 <h6 class="card-rate fw-bold">$225,000</h6>
                                 <p class="card-text-address">263 S Rexford Dr, Beverly Hills, CA 90212</p>
                                 <p class="card-text-details">
-                                    <img src="images/bed.png" width="20" height="16" alt="Bed Icon" /><span class="mx-1">4 Beds</span>
-                                    <img src="images/bathtub.png" width="30" height="30" alt="Bathtub Icon" /><span class="mx-1">2 Baths</span>
-                                    <img src="images/sq_feet.png" width="17" height="17" alt="SqFt Icon" /><span class="mx-1">980 SqFt</span>
+                                    <span class="mx-1 p-0">4 Beds</span>
+                                    <span class="mx-1 p-0">2 Baths</span>
+                                    <span class="mx-1 p-0">980 SqFt</span>
                                 </p>
                             </div>
                         </div>
@@ -203,7 +217,7 @@
     <section class="information">
         <div class="container col-12">
             <div class="row">
-                <div class="col-12 col-md-12 col-xl-6 my-5 p-0">
+                <div class="col-12 col-md-12 col-xl-6 mt-2 p-0">
                     <div class="card p-4 mx-auto card-bg-gray">
                         <div class="card-body rounded">
                             <h5 class="card-title-information m-0 fw-bold text-primary">Aktas Properties Information</h5>
@@ -213,7 +227,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-12 col-xl-6 my-5 p-0">
+                <div class="col-12 col-md-12 col-xl-6 mt-2 p-0">
                     <div class="card p-4 mx-auto bg-primary">
                         <div class="card-body rounded">
                             <h5 class="card-title-information m-0 fw-bold text-white">Want to Sell Property?</h5>
