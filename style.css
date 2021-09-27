@@ -23,16 +23,23 @@
     background-color: #ff9f00 !important;
 }
 
+header.navbar{
+    padding: 40px 165px;
+}
+
 .navbar .navbar-nav > .nav-item > .nav-link{
     color: #ffffff;
     font-size: 14px;
     font-weight: 600;
-    padding: 0 24px;
+    padding: 0 19px;
 }
 
-section.bg-primary .navbar .container-fluid{
-    margin: 0 165px !important;
-    padding: 40px 12px !important;
+.d-flex  .nav-link{
+    padding: 0 !important;
+}
+
+.d-flex  .nav-link > i.fa-exchange{
+    padding-right: 10px;
 }
 
 section.bg-primary{
@@ -54,17 +61,12 @@ span > a.nav-link.text-white{
     font-size: 24px;
 }
 
-li.nav-item{
-    height: 35px;
-}
-
 form{
-    max-width: 635px;
     background-color: #ffffff;
     border-radius: 12px 12px 12px 12px;
 }
 
-select{
+.select{
     max-width: 150px;
     height: 50px;
     padding: 10px;
@@ -74,12 +76,19 @@ select{
     border: none;
 }
 
+.select + img{
+    padding-right: 10px;
+}
+
 button.search{
     max-width: 50px;
     height: 50px;
-    padding: 0;
+    padding: 0 10px 0 27px;
     border-radius: 0;
-    border: none;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
     font-weight: 100;
     background-color: #ffffff;
     color: #2e46e3;
@@ -91,6 +100,7 @@ input.keyword{
    height: 50px; 
    padding: 10px;
    border: none;
+   color: #454545;
 }
 
 input.keyword::placeholder{
@@ -98,7 +108,7 @@ input.keyword::placeholder{
     font-size:14px;
 }
 
-select:focus,input.keyword:focus{
+.select:focus,input.keyword:focus{
     outline: none;
 }
 
@@ -362,26 +372,33 @@ footer p{
     transition: none !important;
 }
 
-
-.hero{
-    color: white;
+section.bg-primary{
     position: relative;
-    top: 35%;
-    transform: translate(0,-50%);
 }
 
+.hero{
+    color: #ffffff;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 165px;
+}
+
+.hero .hero-content{
+    max-width: 635px;
+}
 
 .hero .hero-content h1{
     font-size: 44px;
     margin: 0 0 9px;
-    height: 60px;
 }
 
 .hero .hero-content p{
     font-size: 18px;
     margin:0 0 40px;
-    height: 24px;
 }
+
 
 /* .hero .hero-content{
     max-width: 635px !important;
@@ -419,13 +436,13 @@ footer p{
         transform: translate(0,-50%);
     } */
 
-    .hero .hero-content h1{
+    /* .hero .hero-content h1{
         font-size: 24px;
     }
     
     .hero .hero-content p{
         font-size: 12px;
-    }
+    } */
         
     .card.card-bg-gray > .card-body > h5.card-title-information,
     .card > .card-body > h5.card-title-information{
@@ -443,18 +460,54 @@ footer p{
     }    
 }
 
+form{
+    display: flex;
+    flex-direction: row;
+}
 
-@media (max-width: 1312px) { 
-    section.bg-primary .navbar .container-fluid{
-        margin: 40px auto !important;
+@media (min-width: 1441px) { 
+    section.bg-primary{
+        height: 568px;
+    }    
+}
+
+@media screen and (max-width: 495px) { 
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .group1{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    button.search{
+        border-radius: 12px;
+    }
+}
+
+@media (max-width: 1200px) { 
+    header.navbar{
+        padding: 40px 12px !important;
+    }
+    .d-flex  .nav-link > i.fa-bars{
+        padding-right: 10px !important;
     }
     
-    /* .hero .hero-content{
-        max-width: 635px !important;
-        position: absolute;
-        top: 50%;
-        left: 0;
-        transform: translate(0,-50%);
-        margin: 0;
-    } */
+    .hero{
+        padding: 0 12px;
+    }
+    
+}
+
+@media (max-width: 992px) { 
+    .navbar-collapse .nav-link{
+        margin: 15px 0;
+    }
+    
+    .collapse.navbar-collapse{
+        height: 100vh;
+    }
 }
