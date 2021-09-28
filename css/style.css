@@ -535,7 +535,9 @@ form{
     .hero-content p{
         font-size: 16px !important;
     }
-
+    .dropdown-content{
+        margin-top: 50px !important;
+    }
 }
 .navbar .navbar-collapse {
     text-align: center;

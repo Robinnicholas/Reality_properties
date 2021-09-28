@@ -1,20 +1,31 @@
 // dropdown
+let counter = 0;
 let clickableParagraph = document.querySelector("p.select");
 let clickableImg = document.querySelector(".dropdown-img");
 let dropdownContent = document.querySelector(".dropdown-content");
 
 clickableParagraph.addEventListener("click", () => {
-  dropdown();
+  counter += 1;
+  if (counter % 2 == 0) {
+    dropdownContent.style.display = "none";
+  } else {
+    dropdown();
+  }
 });
 
 clickableImg.addEventListener("click", () => {
-  dropdown();
+  counter += 1;
+  if (counter % 2 == 0) {
+    dropdownContent.style.display = "none";
+  } else {
+    dropdown();
+  }
 });
 
 document.addEventListener("click", (e) => {
-    if(e.target !== clickableParagraph && e.target !== clickableImg){
-        dropdownContent.style.display = "none";
-    }
+  if (e.target !== clickableParagraph && e.target !== clickableImg) {
+    dropdownContent.style.display = "none";
+  }
 });
 
 function dropdown() {
