@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK&display=swap');
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Noto Sans HK', sans-serif;
+  background: #fff;
+}
+.slider {
+  position: relative;
+}
+.slider .owl-item.active.center .slider-card {
+  transform: scale(1) translateZ(100px);
+  opacity: 1;
+  background: #ffffff;
+  color: #454545;
+}
+
+.slider .owl-item.active.center h5{
+  font-size: 24px !important;
+  margin-bottom: 18px !important;
+}
+
+.slider .owl-item.active.center p{
+  font-size: 18px !important;
+  line-height: 27px;
+}
+
+.slider-card {
+  width: 380px;
+  height: 550px;
+  margin-bottom: 90px;
+  background: #f6f7f9;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgb(0,0,0,0.05);
+  transform: scale(0.8);
+  /* opacity: 0.5; */
+  transition: all 0.3s;
+}
+
+.owl-carousel .owl-item img {
+  display: block;
+  width: 120px !important;
+  border-radius: 50px !important;
+  margin: 30px 163px;
+}
+
+.owl-nav .owl-prev {
+  position: absolute;
+  top: calc(50% - 25px);
+  left: 0;
+  opacity: 1;
+  font-size: 30px !important;
+  z-index: 1;
+}
+.owl-nav .owl-next {
+  position: absolute;
+  top: calc(50% - 25px);
+  right: 0;
+  opacity: 1;
+  font-size: 30px !important;
+  z-index: 1;
+}
+
+.owl-nav .owl-next .fa.fa-angle-right::before{
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  margin-right: 5px;
+  content: "";
+  background: url("../images/arrow-right.svg") no-repeat 0 0;
+  background-size: 100%;
+}
+
+.owl-nav .owl-prev .fa.fa-angle-left::before{
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  margin-right: 5px;
+  content: "";
+  background: url("../images/arrow-right.svg") no-repeat 0 0;
+  background-size: 100%;
+  transform: rotate(180deg);
+}
