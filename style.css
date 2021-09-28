@@ -39,8 +39,9 @@ header.navbar{
 }
 
 .d-flex  .nav-link > i.fa-exchange{
-    padding-right: 10px;
+    padding-right: 25px;
 }
+
 
 section.bg-primary{
     background-image: url("images/background.jpg");
@@ -61,29 +62,66 @@ span > a.nav-link.text-white{
     font-size: 24px;
 }
 
+/* arrow  */
+svg{
+    font-size: 14px;
+    width: 16px;
+    height: 16px;
+}
+
+svg.bi-list{
+    width: 43px;
+    padding-right: 27px;
+}
+
+svg.bi-arrow-left-right{
+    width: 43px;
+    padding-right: 27px;
+}
+
+
 form{
     background-color: #ffffff;
     border-radius: 12px 12px 12px 12px;
 }
 
-.select{
-    max-width: 150px;
-    height: 50px;
+p.select{
+    width: 150px;
+    /* height: 50px; */
+    line-height: 30px;
     padding: 10px;
+    margin: 0 !important;
     border-radius: 12px 0 0 12px;
     color:#454545;
-    font-size: 14px;
+    font-size: 14px !important;
     border: none;
+    display: inline-block;
+    position: relative;  
 }
 
-.select + img{
+.dropdown-content p {
+    margin: 20px !important;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 0 12px;
+    z-index: 1;
+}
+
+
+p.select + img{
     padding-right: 10px;
 }
 
 button.search{
     max-width: 50px;
     height: 50px;
-    padding: 0 10px 0 27px;
+    padding: 0 13px 0 27px;
     border-radius: 0;
     border-top: none;
     border-right: none;
@@ -96,19 +134,19 @@ button.search{
 
 input.keyword{
    display: inline-block;
-   min-width: 250px;
+   width: 267px;
    height: 50px; 
    padding: 10px;
    border: none;
    color: #454545;
+   border-radius: 12px;
 }
 
 input.keyword::placeholder{
     color: #454545;
     font-size:14px;
 }
-
-.select:focus,input.keyword:focus{
+input.keyword:focus{
     outline: none;
 }
 
@@ -378,11 +416,13 @@ section.bg-primary{
 
 .hero{
     color: #ffffff;
-    position: absolute;
+    position: relative;
     width: 100%;
-    top: 50%;
+    top: calc(50% - 112px);
     transform: translateY(-50%);
-    padding: 0 165px;
+    padding: 0 12px;
+    margin: 0 auto;
+    max-width: 1134px;
 }
 
 .hero .hero-content{
@@ -398,17 +438,6 @@ section.bg-primary{
     font-size: 18px;
     margin:0 0 40px;
 }
-
-
-/* .hero .hero-content{
-    max-width: 635px !important;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translate(0,-50%);
-    margin: 0 165px;
-} */
-
 
 /* tablet - md */
 
@@ -429,20 +458,6 @@ section.bg-primary{
 /* small - sm */
 
 @media (max-width: 576px) {
-    /* .hero .hero-content{
-        max-width: 635px;
-        position: absolute;
-        top: 40%;
-        transform: translate(0,-50%);
-    } */
-
-    /* .hero .hero-content h1{
-        font-size: 24px;
-    }
-    
-    .hero .hero-content p{
-        font-size: 12px;
-    } */
         
     .card.card-bg-gray > .card-body > h5.card-title-information,
     .card > .card-body > h5.card-title-information{
@@ -469,9 +484,12 @@ form{
     section.bg-primary{
         height: 568px;
     }    
+    .hero{
+        max-width: 1134px !important;
+    }
 }
 
-@media screen and (max-width: 495px) { 
+@media screen and (max-width: 520px) { 
     form{
         display: flex;
         flex-direction: column;
@@ -481,19 +499,38 @@ form{
     .group1{
         display: flex;
         justify-content: space-between;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    input.select{
+        width: 90%;
+    }
+
+    input.keyword{
+        width: 90%;
+    }
+
+    .hero-content h1{
+        font-size: 32px !important;
+    }
+    
+    .hero-content p{
+        font-size: 16px !important;
     }
 
     button.search{
         border-radius: 12px;
+        padding: 10px;
     }
+
 }
 
-@media (max-width: 1200px) { 
+@media (max-width: 1439px) { 
     header.navbar{
         padding: 40px 12px !important;
     }
     .d-flex  .nav-link > i.fa-bars{
-        padding-right: 10px !important;
+        padding-right: 25px !important;
     }
     
     .hero{
@@ -502,12 +539,21 @@ form{
     
 }
 
+@media (max-width: 350px) {
+    .d-flex  .nav-link > i.fa-bars{
+        padding-right: 10px !important;
+    }
+    i.fa-exchange{
+        padding-right: 10px !important;
+    }
+}
+
 @media (max-width: 992px) { 
     .navbar-collapse .nav-link{
-        margin: 15px 0;
+        margin: 20px 0;
     }
     
     .collapse.navbar-collapse{
-        height: 100vh;
+        height: calc(100vh - 83px);
     }
 }
