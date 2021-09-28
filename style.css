@@ -79,6 +79,10 @@ svg.bi-arrow-left-right{
     padding-right: 27px;
 }
 
+svg.bi-heart{
+    width: 43px;
+}
+
 
 form{
     background-color: #ffffff;
@@ -453,6 +457,21 @@ section.bg-primary{
         color: #454545;
         font-weight: 400;
     }
+
+    
+    svg.bi-list{
+        width: 43px;
+        padding:0 ;
+    }
+    
+    svg.bi-arrow-left-right{
+        width: 43px;
+        padding:0 ;
+    }
+
+    svg.bi-heart{
+        width: 43px;
+    }
 }
 
 /* small - sm */
@@ -473,6 +492,20 @@ section.bg-primary{
     .text-left{
         text-align: center !important;    
     }    
+
+    svg.bi-list{
+        width: 43px;
+        padding: 0;
+    }
+    
+    svg.bi-arrow-left-right{
+        width: 43px;
+        padding: 0;
+    }
+
+    svg.bi-heart{
+        width: 43px;
+    }
 }
 
 form{
@@ -523,8 +556,23 @@ form{
         padding: 10px;
     }
 
-}
+    svg.bi-list{
+        width: 30px;
+        padding: 0;
+    }
+    
+    svg.bi-arrow-left-right{
+        width: 30px;
+        padding: 0;
+    }
 
+    svg.bi-heart{
+        width: 30px;
+    }
+}
+.navbar .navbar-collapse {
+    text-align: center;
+  }
 @media (max-width: 1439px) { 
     header.navbar{
         padding: 40px 12px !important;
@@ -540,11 +588,11 @@ form{
 }
 
 @media (max-width: 350px) {
-    .d-flex  .nav-link > i.fa-bars{
-        padding-right: 10px !important;
+    .bi-arrow-left-right{
+        padding: 0 !important;
     }
-    i.fa-exchange{
-        padding-right: 10px !important;
+    .bi-list{
+        padding: 0 !important;
     }
 }
 
