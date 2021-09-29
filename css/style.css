@@ -168,10 +168,13 @@ section.properties{
 
 .properties li{
     width: 350px;
+    margin: 0 14px;
+    padding: 0;
 }
 
-.properties li > img{
+.properties li img{
     width: 350px;
+    height: 250px;
     border-radius: 5px 5px 0 0;
 }
 
@@ -180,6 +183,7 @@ section.properties{
     border-top: none;
     padding: 19px 43px 26px 20px;
     border-radius: 0 0 5px 5px;
+    width: 350px;
 }
 
 .properties .card-body h5{
@@ -564,6 +568,52 @@ form{
     section.bg-primary{
         height: 568px;
     }    
+}
+
+@media (max-width: 768px) { 
+    .properties li{
+        width: 300px;
+        margin: 0 16px;
+        padding: 0;
+    }
+    
+    .properties li img{
+        width: 300px;
+        height: 250px;
+        border-radius: 5px 5px 0 0;
+    }
+    
+    .properties .card-body{
+        border: 1px solid #f0f0f1;
+        border-top: none;
+        padding: 19px 43px 26px 20px;
+        border-radius: 0 0 5px 5px;
+        width: 300px;
+    }
+    
+}
+
+@media (max-width: 413px) { 
+    .properties li{
+        width: 275px;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .properties li img{
+        width: 250px;
+        height: 250px;
+        border-radius: 5px 5px 0 0;
+    }
+    
+    .properties .card-body{
+        border: 1px solid #f0f0f1;
+        border-top: none;
+        padding: 19px 43px 26px 20px;
+        border-radius: 0 0 5px 5px;
+        width: 250px;
+    }
+    
 }
 
 @media screen and (max-width: 520px) { 
