@@ -163,7 +163,7 @@ section.properties{
 .properties a{
     text-decoration: none;
     margin-top: 31px;
-    padding: 0 15px;
+    padding: 0;
 }
 
 .properties li{
@@ -568,6 +568,9 @@ form{
     section.bg-primary{
         height: 568px;
     }    
+}
+
+@media (max-width: 1163px) { 
 }
 
 @media (max-width: 768px) { 
