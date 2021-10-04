@@ -48,8 +48,12 @@ a.navbar-brand{
     z-index: 100;
 }
 .navbar .navbar-nav > .nav-item  a.nav-link.arrow{
-    padding: 0 25px ;
+    padding: 0 25px;
     z-index: 100;
+}
+
+.navbar .navbar-nav > .nav-item  a.nav-link.cross{
+    display: none;
 }
 .navbar .navbar-nav > .nav-item  a.nav-link.heart{
     padding: 0;
@@ -69,7 +73,8 @@ header .d-flex .navbar-nav{
 
 section.bg-primary{
     background-image: url("../images/background.jpg");
-    max-height: 651px;
+    height: 100vh;
+    max-height: 650px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -104,6 +109,7 @@ p.select{
 
 .dropdown-content p {
     margin: 20px !important;
+    font-size: 14px !important;
 }
 
 .dropdown-content{
@@ -180,12 +186,17 @@ section.properties{
     padding: 96px 20px 50px;
 }
 
+section.properties h2{
+    font-size: 32px;
+}
+
 .properties ul{
     list-style: none;
 }
 
 .properties li{
     max-width: 350px;
+    box-sizing: content-box;
 }
 
 .properties li img{
@@ -226,7 +237,7 @@ section.properties{
 .properties .card-body p{
     font-size: 14px;
     color: #454545;
-    margin-bottom: 11px;
+    margin-bottom: 0;
 }
 .properties .card-body .icon-wrapper span{
     font-size: 14px;
@@ -274,8 +285,9 @@ section.contact{
 }
 
 .contact li{
-    max-width: 540px;
+    max-width: 440px;
     border-radius: 5px;
+    box-sizing: content-box;
 }
 
 .contact li:nth-of-type(1){
@@ -326,7 +338,7 @@ section.contact{
     padding: 0 15px;
 }
 
-.details-section{
+.sale{
     background:url('../images/house.png');
     background-repeat: no-repeat;
     background-position: center;
@@ -335,89 +347,90 @@ section.contact{
     padding: 138px 0 138px 0;
 }
 
-.details-section .card-body{
+.sale .card-body{
     padding: 50px;
 }
 
-.details-section .card-body > span.btn-warning{
+.sale .card-body > span.btn-warning{
     margin-bottom: 27px;
+    font-weight: 700;
 }
 
-.details-section .card-body h5.card-title{
+.sale .card-body h5.card-title{
     font-size: 32px;
     color: #000000;
     letter-spacing: -1px;
     margin-bottom: 8px;
 }
 
-.details-section .card-body h6.card-rate{
+.sale .card-body h6.card-rate{
     color: #004dff;
     font-size: 24px;
     margin-bottom: 9px ;
 }
 
-.details-section .card-body p.card-text-address{
+.sale .card-body p.card-text-address{
     font-size: 18px;
     color: #454545;
     margin-bottom: 25px;
 }
 
-.details-section .card-body .card-text span:nth-of-type(1)::before{
+.sale .card-body .card-text span:nth-of-type(1)::before{
     content: url("../images/bed.svg");
     width: 30px;
     margin-right:15px;
 }   
-.details-section .card-body .card-text span:nth-of-type(2)::before{
+.sale .card-body .card-text span:nth-of-type(2)::before{
     content: url("../images/bathtub.svg");
     width: 30px;
     margin-right:5px;
     
 }
-.details-section .card-body .card-text span:nth-of-type(3)::before{
+.sale .card-body .card-text span:nth-of-type(3)::before{
     content: url("../images/sq.svg");
     width: 30px;
     margin-right:13px;
     vertical-align: bottom;
 }
 
-.details-section .card-body .card-text span:nth-of-type(3){
+.sale .card-body .card-text span:nth-of-type(3){
     margin-right: 0;
 }
 
-.details-section .card-body .card-text span{
+.sale .card-body .card-text span{
     font-size: 14px;
     color: #454545;
     opacity: 70%;
     margin-right: 26px;
 }
 
-.details-section .user-card .card-body .user-details-wrapper{
+.sale .user-card .card-body .user-details-wrapper{
     margin-left: 20px;
 }
 
-.details-section .user-card .card-body .d-flex + .col-lg-4{
+.sale .user-card .card-body .d-flex + .col-lg-4{
     line-height: 3;
 }
 
-.details-section .user-card .card-body .d-flex + .col-lg-4 > .contact-us{
+.sale .user-card .card-body .d-flex + .col-lg-4 > .contact-us{
     width: 114px;
     height: 50px;
     line-height: 2.5;
 }
 
-.details-section .user-card{
+.sale .user-card{
     margin: 10px 0 0;
 }
 
-.details-section .user-card .card-body{
+.sale .user-card .card-body{
     padding: 20px 50px;
 }
 
-.details-section .user-card .card-body p{
+.sale .user-card .card-body p{
     color: #454545;
 }
 
-.details-section .user-card .card-body span{
+.sale .user-card .card-body span{
     font-size: 14px;
     color: #454545;
     opacity: 70%;
@@ -547,6 +560,20 @@ section.bg-primary{
 /* small - sm */
 
 @media (max-width: 576px) {
+    
+    .contact li{
+        max-width: 440px;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    .contact li h2{
+        font-size: 32px !important;
+    }
+
+    .contact li p{
+        font-size: 16px !important;
+    }
 
     .card.card-bg-gray > .card-body > h5.card-title-information,
     .card > .card-body > h5.card-title-information{
@@ -570,8 +597,24 @@ form{
     flex-direction: row;
 }
 
+@media (max-width: 1200px) { 
+    .properties .d-flex{
+        justify-content: center !important;
+    }
+}
+
+@media (max-width: 1115px) { 
+    .contact .d-flex{
+        flex-direction: column !important;
+        align-items: center;
+    }
+
+    .contact .d-flex li:nth-of-type(2){
+        margin-top: 20px;
+    }
+}
+
 @media (max-width: 768px) { 
-    
     
     section.properties{
         padding: 50px 0 25px;
@@ -580,6 +623,10 @@ form{
 }
 
 @media (max-width: 376px) {
+    .properties li {
+        max-width: 350px;
+        box-sizing: border-box;
+    }
 
     section.contact{
         padding: 25px 12px 50px !important;
@@ -669,8 +716,48 @@ form{
     
 }
 
-
 @media (max-width: 992px) { 
+    .navbar-collapse + .d-flex > ul{
+        width: 162px;
+        justify-content: flex-end;
+    }
+
+    button[aria-expanded="true"] .bar{
+        display: none;
+    }
+    button[aria-expanded="true"] .cross{
+        display: block !important;
+    }
+
+    .arrow,.heart{
+        visibility: hidden;
+    }
+
+    .navbar-collapse + .d-flex{
+        height: 35px;
+    }
+
+    .navbar {
+        position: relative;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    
+    header{
+        background-color: #004dff;
+        z-index: 10;
+    }
+    .collapse > ul.navbar-nav {
+        display: flex;
+        /* margin-top: 12%; */
+        flex-direction: column;
+        padding-left: 0px;
+        margin-bottom: 0;
+        list-style: none;
+    }
+
     .contact li{
         margin-top: 20px;
     }
@@ -698,95 +785,96 @@ form{
         height: calc(651px - 83px);
     }
     
-    .details-section .card-body{
+    .sale .card-body{
         padding: 30px 50px;
     }
 
-    .details-section .card-body > span.btn-warning{
+    .sale .card-body > span.btn-warning{
         margin-bottom: 18px;
     }
     
-    .details-section .card-body h5.card-title{
+    .sale .card-body h5.card-title{
         font-size: 24px;
         color: #000000;
         letter-spacing: -1px;
         margin-bottom: 8px;
     }
     
-    .details-section .card-body h6.card-rate{
+    .sale .card-body h6.card-rate{
         color: #004dff;
         font-size: 18px;
         margin-bottom: 9px ;
     }
     
-    .details-section .card-body p.card-text-address{
+    .sale .card-body p.card-text-address{
         font-size: 16px;
         color: #454545;
         margin-bottom: 10px;
     }
     
-    .details-section .card-body .card-text span:nth-of-type(1)::before{
+    .sale .card-body .card-text span:nth-of-type(1)::before{
         content: url("../images/bed.svg");
         width: 30px;
         margin-right:10px;
     }   
-    .details-section .card-body .card-text span:nth-of-type(2)::before{
+    .sale .card-body .card-text span:nth-of-type(2)::before{
         content: url("../images/bathtub.svg");
         width: 30px;
         margin-right:0;
         
     }
-    .details-section .card-body .card-text span:nth-of-type(3)::before{
+    .sale .card-body .card-text span:nth-of-type(3)::before{
         content: url("../images/sq.svg");
         width: 30px;
         margin-right:8px;
         vertical-align: bottom;
     }
     
-    .details-section .card-body .card-text span:nth-of-type(3){
+    .sale .card-body .card-text span:nth-of-type(3){
         margin-right: 0;
     }
     
-    .details-section .card-body .card-text span{
+    .sale .card-body .card-text span{
         font-size: 14px;
         color: #454545;
         opacity: 70%;
         margin-right: 10px;
     }
     
-    .details-section .user-card .card-body .user-details-wrapper{
+    .sale .user-card .card-body .user-details-wrapper{
         margin-left: 20px;
     }
 
-    .details-section .user-card .card-body .user-details-wrapper p{
+    .sale .user-card .card-body .user-details-wrapper p{
         font-size: 14px;
     }
 
-    .details-section .user-card .card-body .user-details-wrapper span{
+    .sale .user-card .card-body .user-details-wrapper span{
         font-size: 12px;
         color: #454545;
         opacity: 70%;
     }
     
-    .details-section .user-card .card-body .d-flex{
+    .sale .user-card .card-body .d-flex{
         justify-content: center;
     }
 
-    .details-section .user-card .card-body .d-flex + .col-lg-4{
+    .sale .user-card .card-body .d-flex + .col-lg-4{
         line-height: 3;
     }
     
-    .details-section .user-card .card-body .d-flex + .col-lg-4 > .contact-us{
+    .sale .user-card .card-body .d-flex + .col-lg-4 > .contact-us{
         width: 100px;
         height: 40px;
         line-height: 2;
+        margin-top: 20px;
     }
     
-    .details-section .user-card{
+    .sale .user-card{
         margin: 10px 0 0;
     }
     
-    .details-section .user-card .card-body{
+    .sale .user-card .card-body{
         padding: 20px 50px;
     }
 }
@@ -804,17 +892,69 @@ form{
     }    
 }
 
+@media (max-width: 450px) {
+    .properties h2,
+    .client-slider h2{
+        font-size: 24px !important;
+    }
+}
+
 @media (max-width: 400px) {
 
-    a.navbar-brand > img{
-        width: 135px;
+    .sale .card-body{
+        padding:20px 20px;
     }
-    
+    .sale .user-card .card-body {
+        padding: 20px 20px;
+    }
+
+    .sale .card-body .card-text span {
+        font-size: 12px;
+        color: #454545;
+        opacity: 70%;
+        margin-right: 5px;
+    }
+   
     .contact li h2{
-        font-size: 32px !important;
+        font-size: 24px !important;
     }    
 
     .contact li p{
-        font-size: 16px !important;
+        font-size: 14px !important;
     }    
+}
+
+
+@media (max-width: 525px) {
+ 
+    .navbar-collapse + .d-flex > ul{
+        width: 130px;
+        justify-content: flex-end;
+    }
+
+    a.navbar-brand > img{
+        width: 130px !important;
+    }
+
+    .navbar-collapse li.nav-item a.nav-link{
+        padding: 0 !important;
+    }
+ 
+}
+
+@media (max-width: 360px) {
+    
+    .navbar-collapse + .d-flex > ul{
+        width: 100px;
+        justify-content: flex-end;
+    }
+    a.navbar-brand > img{
+        width: 125px !important;
+    }
+
+    .navbar-collapse li.nav-item a.nav-link{
+        padding: 0 !important;
+        font-size: 13px !important;
+    }
+ 
 }

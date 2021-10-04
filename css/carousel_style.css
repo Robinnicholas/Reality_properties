@@ -6,22 +6,22 @@ body {
   font-family: 'Noto Sans HK', sans-serif;
   background: #fff;
 }
-.slider {
+.client-slider {
   position: relative;
 }
-.slider .owl-item.active.center .slider-card {
+.client-slider .owl-item.active.center .slider-card {
   transform: scale(1) translateZ(100px);
   opacity: 1;
   background: #ffffff;
   color: #454545;
 }
 
-.slider .owl-item.active.center h5{
+.client-slider .owl-item.active.center h5{
   font-size: 24px !important;
   margin-bottom: 18px !important;
 }
 
-.slider .owl-item.active.center p{
+.client-slider .owl-item.active.center p{
   font-size: 18px !important;
   line-height: 27px;
 }
@@ -76,9 +76,31 @@ body {
   display: inline-block;
   width: 26px;
   height: 26px;
-  margin-right: 5px;
+  margin-left: 5px;
   content: "";
   background: url("../images/arrow-right.svg") no-repeat 0 0;
   background-size: 100%;
   transform: rotate(180deg);
+}
+
+@media (max-width:475px){
+  
+  .owl-nav .owl-prev {
+    position: absolute;
+    top: 92%;
+    left: 35%;
+    /* transform: translateX(25%); */
+    opacity: 1;
+    font-size: 30px !important;
+    z-index: 1;
+  }
+  .owl-nav .owl-next {
+    position: absolute;
+    top: 92%;
+    right: 35%;
+    /* transform: translateX(-25%); */
+    opacity: 1;
+    font-size: 30px !important;
+    z-index: 1;
+  } 
 }
