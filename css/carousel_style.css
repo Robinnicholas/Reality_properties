@@ -163,4 +163,7 @@ body {
   .rightalign{
     position:static;
   }
+  .client-slider .owl-item.active.center .slider-card {
+    padding: 50px;
+  }
 }
