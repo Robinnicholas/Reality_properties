@@ -125,3 +125,7 @@ setTimeout(()=>{
 
 selecting();
 
+// window.addEventListener('resize', function(event) {
+//   console.log("resizing");
+//   location.reload();
+// }, true);
