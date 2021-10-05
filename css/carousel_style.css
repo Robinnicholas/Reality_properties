@@ -10,31 +10,63 @@ body {
   position: relative;
 }
 .client-slider .owl-item.active.center .slider-card {
-  transform: scale(1) translateZ(100px);
+  max-width: 445px !important;
+  transform: scale(0.9);
   opacity: 1;
   background: #ffffff;
   color: #454545;
 }
 
+.leftalign{
+  position:relative;
+  left: 2%;
+}
+
+.centeralign{
+  position: relative;
+  right: 1%;
+  z-index: 1;
+}
+.rightalign{
+  position:relative;
+  right: 2%;
+}
+
+
 .client-slider .owl-item.active.center h5{
   font-size: 24px !important;
   margin-bottom: 18px !important;
+  letter-spacing: 0 !important;
+}
+
+.client-slider .owl-item.active h5{
+  font-size: 22px !important;
+  margin-bottom: 9px !important;
+  letter-spacing: 0 !important;
 }
 
 .client-slider .owl-item.active.center p{
   font-size: 18px !important;
   line-height: 27px;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+}
+
+.client-slider .owl-item.active p{
+  font-size: 16px !important;
+  line-height: 27px;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
 }
 
 .slider-card {
-  width: 380px;
-  height: 550px;
-  margin-bottom: 90px;
+  max-width: 445px !important;
   background: #f6f7f9;
   border-radius: 5px;
   box-shadow: 0 0 20px rgb(0,0,0,0.05);
-  transform: scale(0.8);
-  /* opacity: 0.5; */
+  transform: scale(0.75);
   transition: all 0.3s;
 }
 
@@ -42,7 +74,7 @@ body {
   display: block;
   width: 120px !important;
   border-radius: 50px !important;
-  margin: 30px 163px;
+  margin: 0 0 47px;
 }
 
 .owl-nav .owl-prev {
@@ -83,13 +115,35 @@ body {
   transform: rotate(180deg);
 }
 
+
+@media (min-width:475px){
+  .slider-card {
+    padding: 50px 52px 39px;
+    max-width: 445px !important;
+    background: #f6f7f9;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgb(0,0,0,0.05);
+    transform: scale(0.75);
+    transition: all 0.3s;
+  }
+  .owl-item.active.center .slider-card {
+    padding: 50px 52px 39px;
+    width: 445px !important;
+    min-height: 550px !important;
+    background: #f6f7f9;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgb(0,0,0,0.05);
+    transform: scale(0.75);
+    transition: all 0.3s;
+  }
+}
+
 @media (max-width:475px){
   
   .owl-nav .owl-prev {
     position: absolute;
     top: 92%;
     left: 35%;
-    /* transform: translateX(25%); */
     opacity: 1;
     font-size: 30px !important;
     z-index: 1;
@@ -98,9 +152,15 @@ body {
     position: absolute;
     top: 92%;
     right: 35%;
-    /* transform: translateX(-25%); */
     opacity: 1;
     font-size: 30px !important;
     z-index: 1;
   } 
+  
+  .leftalign{
+    position:static;
+  }
+  .rightalign{
+    position:static;
+  }
 }

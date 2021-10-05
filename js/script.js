@@ -65,3 +65,63 @@ $(document).ready(function () {
     },
   });
 });
+
+let activeItems;
+let elementStyleLeft;
+let elementStyleRight;
+
+function selecting(){
+  setTimeout(()=>{
+    activeItems = document.querySelectorAll(".owl-item.active");
+    itemsLeft = document.querySelector(".owl-item.leftalign");
+    itemsRight = document.querySelector(".owl-item.rightalign");
+
+    console.log(itemsLeft);
+    if(itemsLeft){
+      itemsLeft.classList.remove("leftalign");
+      itemsLeft.classList.remove("centeralign");
+      itemsLeft.classList.remove("rightalign");
+    }
+    if(itemsRight){
+      itemsRight.classList.remove("leftalign");
+      itemsRight.classList.remove("centeralign");
+      itemsRight.classList.remove("rightalign");
+    }
+    
+    activeItems[0].classList.remove("leftalign");
+    activeItems[0].classList.remove("centeralign");
+    activeItems[0].classList.remove("rightalign");
+    
+    activeItems[1].classList.remove("leftalign");
+    activeItems[1].classList.remove("centeralign");
+    activeItems[1].classList.remove("rightalign");
+    
+    activeItems[2].classList.remove("leftalign");
+    activeItems[2].classList.remove("centeralign");
+    activeItems[2].classList.remove("rightalign");
+
+    
+    activeItems[0].classList.add("leftalign");
+    activeItems[1].classList.add("centeralign");
+    activeItems[2].classList.add("rightalign");
+  }, 100)
+}
+
+let leftArrow;
+let rightArrow;
+
+setTimeout(()=>{
+  leftArrow = document.querySelector(".fa-angle-left");
+  rightArrow = document.querySelector(".fa-angle-right");
+
+  leftArrow.addEventListener("click", () => {
+    selecting();
+  })
+
+  rightArrow.addEventListener("click", () => {
+    selecting();
+  })
+},200);
+
+selecting();
+
