@@ -1,45 +1,35 @@
-// dropdown
-let counter = 0;
-let clickableParagraph = document.querySelector("p.select");
-let clickableImg = document.querySelector(".dropdown-img");
-let dropdownContent = document.querySelector(".dropdown-content");
-
-clickableParagraph.addEventListener("click", () => {
-  counter += 1;
-  if (counter % 2 == 0) {
-    dropdownContent.style.display = "none";
-  } else {
-    dropdown();
-  }
-});
-
-clickableImg.addEventListener("click", () => {
-  counter += 1;
-  if (counter % 2 == 0) {
-    dropdownContent.style.display = "none";
-  } else {
-    dropdown();
-  }
-});
-
-document.addEventListener("click", (e) => {
-  if (e.target !== clickableParagraph && e.target !== clickableImg) {
-    dropdownContent.style.display = "none";
-  }
-});
-
-function dropdown() {
-  dropdownContent.style.display = "block";
+// dropdown 
+window.onload = dropdown();
+function dropdown(){
+  let dropdownSelect = document.querySelector(".dropdown-select");
+  let choosenValue = document.querySelector("p.select");
+  let dropdownArrow = document.querySelector(".dropdown-img");
+  let dropdownMenu = document.querySelector(".dropdown-content");
   let dropList = document.querySelectorAll(".dropdown-content p");
-  dropList.forEach((e) => {
-    e.addEventListener("click", () => {
-      let selectedValue = e.innerHTML;
-      console.log(selectedValue);
-      clickableParagraph.innerHTML = selectedValue;
-      dropdownContent.style.display = "none";
-    });
+  // initially it should hide on load.
+  dropdownMenu.classList.toggle("hide");
+  // clicking dropdown area.
+  dropdownSelect.addEventListener("click", () => {
+    dropdownMenu.classList.toggle("hide");
+    selectDropdownValue();
   });
+  // clicking outside the dropdown area it should hide.
+  document.addEventListener("click", (e) => {
+    if (e.target !== dropdownSelect && e.target !== dropdownArrow && e.target !== choosenValue) {
+      dropdownMenu.classList.add("hide");
+    }
+  });
+  // function to choose the dropdown value.
+  function selectDropdownValue() {  
+    dropList.forEach((e) => {
+      e.addEventListener("click", () => {
+        let selectedValue = e.innerText;
+        choosenValue.innerText = selectedValue;
+      });
+    });
+  }
 }
+
 
 // Owlcarousel
 $(document).ready(function () {
@@ -66,64 +56,64 @@ $(document).ready(function () {
   });
 });
 
-let activeItems;
-let elementStyleLeft;
-let elementStyleRight;
+// let activeItems;
+// let elementStyleLeft;
+// let elementStyleRight;
 
-function selecting(){
-  setTimeout(()=>{
-    activeItems = document.querySelectorAll(".owl-item.active");
-    itemsLeft = document.querySelector(".owl-item.leftalign");
-    itemsRight = document.querySelector(".owl-item.rightalign");
+// function selecting(){
+//   setTimeout(()=>{
+//     activeItems = document.querySelectorAll(".owl-item.active");
+//     itemsLeft = document.querySelector(".owl-item.leftalign");
+//     itemsRight = document.querySelector(".owl-item.rightalign");
 
-    console.log(itemsLeft);
-    if(itemsLeft){
-      itemsLeft.classList.remove("leftalign");
-      itemsLeft.classList.remove("centeralign");
-      itemsLeft.classList.remove("rightalign");
-    }
-    if(itemsRight){
-      itemsRight.classList.remove("leftalign");
-      itemsRight.classList.remove("centeralign");
-      itemsRight.classList.remove("rightalign");
-    }
+//     console.log(itemsLeft);
+//     if(itemsLeft){
+//       itemsLeft.classList.remove("leftalign");
+//       itemsLeft.classList.remove("centeralign");
+//       itemsLeft.classList.remove("rightalign");
+//     }
+//     if(itemsRight){
+//       itemsRight.classList.remove("leftalign");
+//       itemsRight.classList.remove("centeralign");
+//       itemsRight.classList.remove("rightalign");
+//     }
     
-    activeItems[0].classList.remove("leftalign");
-    activeItems[0].classList.remove("centeralign");
-    activeItems[0].classList.remove("rightalign");
+//     activeItems[0].classList.remove("leftalign");
+//     activeItems[0].classList.remove("centeralign");
+//     activeItems[0].classList.remove("rightalign");
     
-    activeItems[1].classList.remove("leftalign");
-    activeItems[1].classList.remove("centeralign");
-    activeItems[1].classList.remove("rightalign");
+//     activeItems[1].classList.remove("leftalign");
+//     activeItems[1].classList.remove("centeralign");
+//     activeItems[1].classList.remove("rightalign");
     
-    activeItems[2].classList.remove("leftalign");
-    activeItems[2].classList.remove("centeralign");
-    activeItems[2].classList.remove("rightalign");
+//     activeItems[2].classList.remove("leftalign");
+//     activeItems[2].classList.remove("centeralign");
+//     activeItems[2].classList.remove("rightalign");
 
     
-    activeItems[0].classList.add("leftalign");
-    activeItems[1].classList.add("centeralign");
-    activeItems[2].classList.add("rightalign");
-  }, 100)
-}
+//     activeItems[0].classList.add("leftalign");
+//     activeItems[1].classList.add("centeralign");
+//     activeItems[2].classList.add("rightalign");
+//   }, 100)
+// }
 
-let leftArrow;
-let rightArrow;
+// let leftArrow;
+// let rightArrow;
 
-setTimeout(()=>{
-  leftArrow = document.querySelector(".fa-angle-left");
-  rightArrow = document.querySelector(".fa-angle-right");
+// setTimeout(()=>{
+//   leftArrow = document.querySelector(".fa-angle-left");
+//   rightArrow = document.querySelector(".fa-angle-right");
 
-  leftArrow.addEventListener("click", () => {
-    selecting();
-  })
+//   leftArrow.addEventListener("click", () => {
+//     selecting();
+//   })
 
-  rightArrow.addEventListener("click", () => {
-    selecting();
-  })
-},200);
+//   rightArrow.addEventListener("click", () => {
+//     selecting();
+//   })
+// },200);
 
-selecting();
+// selecting();
 
 // window.addEventListener('resize', function(event) {
 //   console.log("resizing");
